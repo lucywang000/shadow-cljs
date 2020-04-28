@@ -154,7 +154,7 @@
         (devtools-msg "load CSS" path-match)
         (gdom/insertSiblingAfter new-link node)
         (gdom/removeNode node)
-        (classlist/remove js/document.body "no-anim")))))
+        (js/setTimeout #(classlist/remove js/document.body "no-anim") 1000)))))
 
 ;; from https://github.com/clojure/clojurescript/blob/master/src/main/cljs/clojure/browser/repl.cljs
 ;; I don't want to pull in all its other dependencies just for this function
