@@ -3,6 +3,7 @@
     [cljs.reader :as reader]
     [clojure.string :as str]
     [goog.dom :as gdom]
+    [goog.dom.classlist :as classlist]
     [goog.userAgent.product :as product]
     [goog.Uri]
     [goog.net.XhrIo :as xhr]
@@ -149,10 +150,11 @@
             (doto (.cloneNode node true)
               (.setAttribute "href" (str path-match "?r=" (rand))))]
 
+        (classlist/add js/document.body "no-anim")
         (devtools-msg "load CSS" path-match)
         (gdom/insertSiblingAfter new-link node)
         (gdom/removeNode node)
-        ))))
+        (classlist/remove js/document.body "no-anim")))))
 
 ;; from https://github.com/clojure/clojurescript/blob/master/src/main/cljs/clojure/browser/repl.cljs
 ;; I don't want to pull in all its other dependencies just for this function
