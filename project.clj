@@ -76,6 +76,8 @@
    ;; for pathom
    [org.clojure/test.check "1.1.0"]
 
+   ;; experimental
+   [hawk "0.2.11"]
    [thheller/shadow-cljsjs "0.0.21"]]
 
   :source-paths
