@@ -9,8 +9,8 @@
               :sign-releases false}}
 
   :javac-options
-  ["-target" "1.8"
-   "-source" "1.8"]
+  ["-target" "15"
+   "-source" "15"]
 
   :managed-dependencies
   [[commons-codec "1.14"]
@@ -79,7 +79,8 @@
    [thheller/shadow-cljsjs "0.0.21"]]
 
   :source-paths
-  ["src/main"]
+  ["src/main"
+   "src/local"]
 
   :test-paths
   ["src/test"]

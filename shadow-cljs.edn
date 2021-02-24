@@ -27,6 +27,7 @@
  :source-paths
  ["src/dev"
   "src/main"
+  "src/local"
   "src/test"]
 
  :build-defaults
