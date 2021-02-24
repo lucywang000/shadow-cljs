@@ -9,8 +9,8 @@
               :sign-releases false}}
 
   :javac-options
-  ["-target" "15"
-   "-source" "15"]
+  ["-target" "1.8"
+   "-source" "1.8"]
 
   :managed-dependencies
   [[commons-codec "1.14"]
